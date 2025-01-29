@@ -1,0 +1,27 @@
+{
+  "name": "namste_react",
+  "version": "1.0.0",
+  "description": "react learning",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yasirkhan21/Namste_React.git"
+  },
+  "author": "Yasir khan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yasirkhan21/Namste_React/issues"
+  },
+  "homepage": "https://github.com/yasirkhan21/Namste_React#readme",
+  "devDependencies": {
+    "parcel": "^2.13.3",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  }
+}
