@@ -58,3 +58,60 @@
 .filter{
   display: flex;
 }
+.menu-card-list {  
+  list-style-type: none; /* Remove default list styling */  
+  padding: 0;  
+  display: flex;  
+  flex-wrap: wrap; /* Allow cards to wrap */  
+  gap: 16px; /* Add space between cards */  
+}  
+
+.menu-card {  
+  border: 1px solid #ccc; /* Card border */  
+  border-radius: 8px; /* Rounded corners */  
+  width: calc(33.33% - 16px); /* Responsive width for three cards per row */  
+  background-color: #fff; /* White background */  
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */  
+  overflow: hidden; /* Ensure content doesn't overflow */  
+  transition: transform 0.3s; /* Smooth animation on hover */  
+}  
+
+.menu-card:hover {  
+  transform: scale(1.03); /* Slightly enlarge on hover */  
+}  
+
+.menu-card-content {  
+  padding: 16px; /* Inner padding */  
+}  
+
+.menu-logo-container {  
+  text-align: center; /* Center the image */  
+  margin-bottom: 8px; /* Space below the image */  
+}  
+
+.menu-logo {  
+  max-width: 100%; /* Responsive image */  
+  height: auto; /* Maintain aspect ratio */  
+}  
+
+.menu-details {  
+  text-align: center; /* Center text */  
+}  
+
+.menu-item-name {  
+  font-size: 1.2em; /* Larger font for item name */  
+  margin: 8px 0; /* Spacing around item name */  
+}  
+
+.menu-item-price {  
+  font-weight: bold; /* Price in bold */  
+  font-size: 1.1em; /* Price size */  
+}  
+
+.no-menu-items {  
+  text-align: center; /* Centered text for no items */  
+  font-style: italic; /* Italics for emphasis */  
+  color: #999; /* Light gray color */  
+}  
+
+
