@@ -114,4 +114,7 @@
   color: #999; /* Light gray color */  
 }  
 
-
+.user-card{
+  padding: 10px;
+  border: 1px solid black;
+}
