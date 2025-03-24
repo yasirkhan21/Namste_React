@@ -25,27 +25,28 @@ const Body = () => {
       json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
-if(onlineStatus===false)return (
-  <h1>
-    Looks like you're offline!! Please check your internet connection;
-  </h1>
-);
+  if (onlineStatus === false)
+    return (
+      <h1>
+        Looks like you're offline!! Please check your internet connection;
+      </h1>
+    );
   return listOfRes.length === 0 ? (
     <Shimmer />
   ) : (
     <div className="body">
-      <div className="filter">
-        <div className="search">
+      <div className="flex items-center">
+        <div className="m-4 p-4">
           <input
             type="text"
             value={searchText}
-            className="search-box"
+            className="border border-solid border-black"
             onChange={(e) => {
               setSearchText(e.target.value);
             }}
           />
           <button
-            className="search-btn"
+            className="px-4 py-2 bg-green-100 m-4 rounded-lg"
             onClick={() => {
               const filteredList = listOfRes.filter((res) =>
                 res.info.name
@@ -59,22 +60,23 @@ if(onlineStatus===false)return (
             Search
           </button>
         </div>
-
-        <button
-          className="filter-btn"
-          onClick={() => {
-            console.log(listOfRes);
-            const filteredList = listOfRes.filter(
-              (res) => res.info.avgRating > 4
-            );
-            console.log(filteredList);
-            setListOfRes(filteredList);
-          }}
-        >
-          Top Rated Restaurant
-        </button>
+        <div className="m-4 p-4">
+          <button
+            className="px-4 py-2 bg-gray-100 rounded-lg"
+            onClick={() => {
+              console.log(listOfRes);
+              const filteredList = listOfRes.filter(
+                (res) => res.info.avgRating > 4
+              );
+              console.log(filteredList);
+              setListOfRes(filteredList);
+            }}
+          >
+            Top Rated Restaurant
+          </button>
+        </div>
       </div>
-      <div className="res-container">
+      <div className="flex flex-wrap">
         {filteredListOfRes.map((restaurant) => (
           <Link
             key={restaurant.info.id}
